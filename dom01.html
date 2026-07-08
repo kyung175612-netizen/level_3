@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <title>자바스크립트 DOM(document Object Model)</title>
+        <!-- 웹글꼴 -->
+        <!-- 파비콘->reset->design->js -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/dom01.css">
+        <script src="./scripts/dom01.js" defer></script>
+        <!-- scrpit의 defer속성 : body태그를 모두 읽고 script 나중에 처리하는 속성 -->
+    </head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="top">
+                <h1><a href="#">ToDo</a></h1>
+                <div class="right">
+                    <a href="#" class="search"><img src="" alt="검색"></a>
+                    <a href="#" class="menu"><img src="" alt="메뉴"></a>
+                </div>
+            </div>
+            <nav>
+                <a href="#" class="active all">All(3)</a>
+                <a href="#" class="today">Today(0)</a>
+            </nav>
+        </header>
+        <main>
+            <ul class="todo_list">
+                <li><span class="date">05.12</span><em class="list">책 15분 읽기</em></li>
+                <li><span class="date">07.07</span><em class="list">과제하기</em></li>
+                <li><span class="date">07.08</span><em class="list">복습하기</em></li>
+                <li><span class="date">07.08</span><em class="list">공부하기</em></li>
+            </ul>
+            <button id="write_btn" onclick="popupShow()"><img src="#" alt="글쓰기창띄우기"></button>
+            <div class="pop_up">
+                <input placeholder="ADD A NEW TASK" class="user_write">
+                <button id="enter"><img src="#" alt="입력"></button>
+            </div>
+            <div class="popup_bg" onclick="popupHide()"></div>
+        </main>
+    </div>
+</body>
+</html>
