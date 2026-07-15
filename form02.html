@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>폼태그2, 선택, 목록기능</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/form02.css">
+    <script src="./scripts/form02.js"></script>
+</head>
+<body>
+    <form action="#" method="post" id="frm1" name="frm1">
+        <!-- p>input:search#user_search_txt -->
+        <p><input type="search" placeholder="검색어" name="user_search_txt" id="user_search_txt"></p>
+        <p><input type="text" value="1" id="number"></p>
+        <p><input type="password" placeholder="비밀번호를 입력하세요" name="user_pw" id="user_pw"></p>
+        <p><textarea rows="30" cols="100" name="user_review" id="user_review"></textarea></p>
+        <p><textarea name="" id="close_comment" cols="40" disabled>현재는 문의시간이 아닙니다.</textarea></p>
+        <p><textarea minlength="10" maxlength="100" name="user_review" id="user_review" placeholder="10자 이상 100자 이하로 입력해주세요." cols="50" rows="5"></textarea></p>
+        <p><button type="button" id="review_btn">리뷰등록</button></p>
+        <hr>
+        <div class="group1">
+            <span>성별을 선택해주세요.</span>
+            <label for="male">남자</label>
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="female">여자</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="gender_none">공개안함</label>
+            <input type="radio" name="gender" value="gender_none" id="gender_none">
+            <!-- input 입력양식/선택양식 -->
+            <!-- 입력양식 name(데이터구분목적), value(기본값) 속성 -->
+            <!-- 선택양식 name(2개 이상의 선택을 묶어주는 동일 그룹명), value(데이터 구분 목적)속성 -->
+            <span>광고 수신 동의</span>
+            <label for="ad_y">동의함</label>
+            <input type="radio" name="ad_g" value="ad_y" id="ad_y">
+            <label for="ad_n">동의안함</label>
+            <input type="radio" name="ad_g" value="ad_n"id="ad_n">
+            <label for="login_state_y">로그인 상태 유지</label>
+            <input type="checkbox" name="login_state_y_g" value="login_state_y" id="login_state_y">
+            <span>관심 종목을 2개 이상 선택하세요.</span>
+            <label for="it">기술/it</label><input type="checkbox" name="interest" value="it" id="it">
+            <label for="sports">스포츠</label><input type="checkbox" name="interest" value="sports" id="sports">
+            <label for="music_movie">음악/영화</label><input type="checkbox" name="interest" value="music_movie" id="music_movie">
+            <span>주문 색상</span>
+            <select name="color_select" id="color_select">
+                <!-- option 내부 다른 태그 금지 -->
+                <option value="none">선택해주세요</option>
+                <option value="white">white</option>
+                <option value="gray">gray</option>
+                <option value="black">black</option>
+            </select>
+            <span>주문 크기</span>
+            <select name="size" id="size">
+                <option value="none">크기를 선택해주세요</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+            </select>
+        </div>
+    </form>
+</html>
