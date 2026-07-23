@@ -1,0 +1,60 @@
+/* animation01.css */
+/* 공통 디자인 */
+div[class^=step] {
+    display: flex; flex-flow: column nowrap; gap:16px;
+    padding:50px 20px;
+}
+button {background: #eee; padding:20px 5px;}
+/* 개별 디자인 */
+.step1 #btn1 {/* 태그에 대한 기본상태 디자인 */
+    background: #ff0; color: #f00; font-weight: 700; border-radius: 5px;
+    /* 상태에 따라 스타일이 변경될 떄, 애니메이션을 주고 싶으면 트렙지션 적용 */
+    transition: 
+        background 0.5s, 
+        border-radius 2s;
+        font-weight: 1s;
+        color: 1s;
+    /* (위)background 속성이 상태에 의해 변경될 떄, 0.5초 동안 속성에 애니메이션을 적용한다. */
+}
+.step1 #btn1:hover {/* :hover 태그에 마우스를 올렸을 떄, 상태 디자인 */
+    background-color: aqua; 
+    border-radius: 25px;
+    font-weight: 500; 
+    color:rgba(0,0,0,0.3);
+}
+/* -----------------------쇼핑몰 상품 형식 애니메이션 연습  */
+.step1 .item{
+    width: 360px;
+    background: #f5f5f5; padding: 7px;
+}
+.step1 .item img{
+    width: 100%;
+    transition: width 1s;;
+}
+.step1 .item h1{}
+.step1 .item .photo{
+    overflow:hidden; height: 500px;
+}
+.step1 .item p{}
+.step1 .item:hover img {/* item에 올렸을 때 img가 변경 */ 
+    width: 110%;
+}
+/* ---------------------------------할인 상품 */
+/* 01. sale에 마우스 올리면 img를 105% 확대하기(css) */
+/* 02. sale에 마우스 올리면 img를 다른 이미지 경로로 변경하기(js) */
+.step1 .sale{width: 280px; background-color: violet;}
+.step1 .sale .photo{}
+.step1 .sale .photo img{
+    width: 100%;
+    transition:
+        width 0.5s /* 기준이 되는 곳에 transition */
+}
+.step1 .sale .color_chip{display: flex;}
+.step1 .sale .color_chip span{width: 12px; height: 12px;}
+.step1 .sale .color_chip .color1{background:#000;}
+.step1 .sale .color_chip .color2{background:#0cf;}
+.step1 .sale h1{}
+.step1 .sale .price{}
+.step1 .sale:hover img{
+    width: 105%;
+}
